@@ -1,0 +1,14 @@
+dependencies:
+  - name: jquery
+    version: 1.11.3
+    src: htmlwidgets/lib/jquery-1.11.3
+    script: jquery-1.11.3.min.js
+  - name: raphael
+    version: 2.1.2
+    src: htmlwidgets/lib/raphael-2.1.2
+    script: raphael-min.js
+  - name: morris.js
+    version: 0.5.1
+    src: htmlwidgets/lib/morris.js-0.5.1
+    script: morris.min.js
+    stylesheet: morris.css
