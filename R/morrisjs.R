@@ -5,11 +5,11 @@
 #' @import htmlwidgets
 #'
 #' @export
-morrisjs <- function(message, width = NULL, height = NULL) {
+morrisjs <- function(data, width = NULL, height = NULL) {
 
   # forward options using x
   x = list(
-    message = message,
+    data = data,
     id = paste0("htmlwidget-", digest::digest(message))
   )
 
