@@ -44,4 +44,4 @@ morrisjs(df) %>%
 
 #### Options 
 
-All options are listed on the [morris.js github page](http://morrisjs.github.io/morris.js/index.html) and can be passed as parameters to the`mjs` functions.
+All options are listed on the [morris.js github page](http://morrisjs.github.io/morris.js/index.html) and can be passed as parameters to the `mjs` functions.
