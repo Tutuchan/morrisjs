@@ -1,6 +1,15 @@
-#' <Add Title>
+#' morris.js plot
 #'
-#' <Add Description>
+#' This function prepares the widget to be drawn. 
+#' 
+#' In the case of a \code{data.frame} or a \code{tbl_df}, the first column must
+#' be a object that can be interpreted as a \code{Data}, the other columns being
+#' the data values.
+#' 
+#' @param data the data to be drawn, can be a \code{ts}, \code{mts}, \code{xts},
+#' \code{data.frame} or \code{tbl_df} object.
+#' @param width the width of the widget (in pixels),
+#' @param height the height of the widget (in pixels).
 #'
 #' @import htmlwidgets
 #'
@@ -10,7 +19,7 @@ morrisjs <- function(data, width = NULL, height = NULL) {
   # forward options using x
   x = list(
     data = data,
-    id = paste0("htmlwidget-", digest::digest(message))
+    element = paste0("htmlwidget-", digest::digest(data))
   )
 
   # create widget
@@ -20,7 +29,7 @@ morrisjs <- function(data, width = NULL, height = NULL) {
     width = width,
     height = height,
     package = 'morrisjs',
-    elementId = x$id
+    elementId = x$element
   )
 }
 

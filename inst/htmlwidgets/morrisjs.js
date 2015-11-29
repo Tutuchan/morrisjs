@@ -12,15 +12,30 @@ HTMLWidgets.widget({
   },
 
   renderValue: function(el, x, instance) {
-    console.log(x);
-
-  new Morris.Line({
-      element: x.id,
-      data: x.data,
-      xkey: x.xkey,
-      ykeys: x.ykeys,
-      labels: x.labels
-});
+    // Workaround if only one series is plotted
+    if (x.ykeys.constructor !== Array) {
+      x.ykeys = new Array(x.ykeys);
+    }
+    if (x.labels.constructor !== Array) {
+      x.labels = new Array(x.labels);
+    }
+  
+  // Create the graph  
+  var mjs;
+  switch(x.type){
+    case "Line": 
+      mjs = new Morris.Line(x);
+      break;
+    case "Area": 
+      mjs = new Morris.Area(x);
+      break;
+    case "Bar": 
+      mjs = new Morris.Bar(x);
+      break;
+  }
+  
+  // Draw it
+  mjs.draw();
 
   },
 
