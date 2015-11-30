@@ -12,7 +12,6 @@
 #' @param height the height of the widget (in pixels).
 #'
 #' @import htmlwidgets
-#'
 #' @export
 morrisjs <- function(data, width = NULL, height = NULL) {
 
@@ -34,13 +33,20 @@ morrisjs <- function(data, width = NULL, height = NULL) {
 }
 
 #' Widget output function for use in Shiny
-#'
+#' 
+#' @param outputId a character, the output variable to read from
+#' @param width the width of the widget (must be valid CSS),
+#' @param height the height of the widget (must be valid CSS)
 #' @export
 morrisjsOutput <- function(outputId, width = '100%', height = '400px'){
   shinyWidgetOutput(outputId, 'morrisjs', width, height, package = 'morrisjs')
 }
 
 #' Widget render function for use in Shiny
+#'
+#' @param expr an R expression that evaluates to a \code{\link{morrisjs}} object,
+#' @param env the environment in which to evaluate \code{expr},
+#' @param quoted a logical: is \code{expr} a quoted expression ?
 #'
 #' @export
 renderMorrisjs <- function(expr, env = parent.frame(), quoted = FALSE) {

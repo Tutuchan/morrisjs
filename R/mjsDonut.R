@@ -6,6 +6,10 @@
 #' Donut charts behave differently from the other charts: input data should
 #' be a list of two elements, \code{labels} and \code{values}
 #' 
+#' @param morrisjs a \code{\link{morrisjs}} object,
+#' @param options an optional list of parameters
+#' @usage morrisjs(data) %>% 
+#' mjsArea(options = NULL)
 #' @export
 mjsDonut <- function(morrisjs, options = NULL){
   

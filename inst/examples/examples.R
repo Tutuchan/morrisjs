@@ -1,7 +1,6 @@
-library(dplyr)
 library(morrisjs)
 
-df <- data_frame(date = as.Date(c("2011-01-01", "2011-02-01", "2011-03-01")), series1 = rnorm(3), series2 = rnorm(3))
+df <- dplyr::data_frame(date = as.Date(c("2011-01-01", "2011-02-01", "2011-03-01")), series1 = rnorm(3), series2 = rnorm(3))
 
 # Bar
 morrisjs(df) %>% 

@@ -4,7 +4,13 @@
 \alias{mjsDonut}
 \title{Donut charts}
 \usage{
-mjsDonut(morrisjs, options = NULL)
+morrisjs(data) %>% 
+mjsArea(options = NULL)
+}
+\arguments{
+\item{morrisjs}{a \code{\link{morrisjs}} object,}
+
+\item{options}{an optional list of parameters}
 }
 \description{
 Draw a donut chart. Possible options are available 

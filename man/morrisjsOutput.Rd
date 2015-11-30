@@ -6,6 +6,13 @@
 \usage{
 morrisjsOutput(outputId, width = "100\%", height = "400px")
 }
+\arguments{
+\item{outputId}{a character, the output variable to read from}
+
+\item{width}{the width of the widget (must be valid CSS),}
+
+\item{height}{the height of the widget (must be valid CSS)}
+}
 \description{
 Widget output function for use in Shiny
 }

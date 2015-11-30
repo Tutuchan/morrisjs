@@ -4,7 +4,13 @@
 \alias{mjsArea}
 \title{Area charts}
 \usage{
-mjsArea(morrisjs, options = NULL)
+morrisjs(data) %>% 
+mjsArea(options = NULL)
+}
+\arguments{
+\item{morrisjs}{a \code{\link{morrisjs}} object,}
+
+\item{options}{an optional list of parameters}
 }
 \description{
 Draw an area chart. Possible options are available 

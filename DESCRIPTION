@@ -1,17 +1,15 @@
 Package: morrisjs
 Title: Create graphs using the morris.js library
-Version: 0.2.0
+Version: 0.2.1
 Authors@R: "Pierre Formont <pierre.formont@gmail.com> [aut, cre]"
 Description: An R interface to the 'morris.js' Javascript library.
 Depends:
     R (>= 3.1.1),
     htmlwidgets,
-    magrittr,
-    xts,
     zoo
 Imports: 
-    xts,
-    zoo
+    magrittr,
+    xts
 License: See LICENCE
 LazyData: true
 RoxygenNote: 5.0.0.9000

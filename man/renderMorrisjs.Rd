@@ -6,6 +6,13 @@
 \usage{
 renderMorrisjs(expr, env = parent.frame(), quoted = FALSE)
 }
+\arguments{
+\item{expr}{an R expression that evaluates to a \code{\link{morrisjs}} object,}
+
+\item{env}{the environment in which to evaluate \code{expr},}
+
+\item{quoted}{a logical: is \code{expr} a quoted expression ?}
+}
 \description{
 Widget render function for use in Shiny
 }

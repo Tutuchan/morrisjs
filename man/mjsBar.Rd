@@ -4,7 +4,13 @@
 \alias{mjsBar}
 \title{Bar charts}
 \usage{
-mjsBar(morrisjs, options = NULL)
+morrisjs(data) %>% 
+mjsBar(options = NULL)
+}
+\arguments{
+\item{morrisjs}{a \code{\link{morrisjs}} object,}
+
+\item{options}{an optional list of parameters}
 }
 \description{
 Draw a bar chart. Possible options are available 

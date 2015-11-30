@@ -4,7 +4,13 @@
 \alias{mjsLine}
 \title{Line charts}
 \usage{
-mjsLine(morrisjs, options = NULL)
+morrisjs(data) %>% 
+mjsLine(options = NULL)
+}
+\arguments{
+\item{morrisjs}{a \code{\link{morrisjs}} object,}
+
+\item{options}{an optional list of parameters}
 }
 \description{
 Draw a line chart. Possible options are available 
