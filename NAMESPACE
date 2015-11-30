@@ -2,6 +2,7 @@
 
 export(mjsArea)
 export(mjsBar)
+export(mjsDonut)
 export(mjsLine)
 export(morrisjs)
 export(morrisjsOutput)

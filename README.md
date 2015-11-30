@@ -1,32 +1,48 @@
 [![Build Status](https://travis-ci.org/Tutuchan/morrisjs.svg?branch=master)](https://travis-ci.org/Tutuchan/morrisjs)
 
-#### morris.js for R
+## morris.js for R - 0.2.0
 
 This package is an interface to the [morris.js](http://morrisjs.github.io/morris.js/index.html) charting library.
 
-#### Installation
+## Installation
 
 ```R 
 devtools::install_github("tutuchan/morrisjs")
 ```
 
-#### Examples
+## Examples
 
-Creating a line chart or a bar chart is done with these simple calls:
+### Line chart
 
 ```R 
 morrisjs(mdeaths) %>% 
   mjsLine
 ```
 
+### Bar chart
+
 ```R 
 morrisjs(mdeaths) %>% 
   mjsBar
 ```
 
-#### Inputs
+### Area chart
 
-Inputs can be either `ts`, `xts` or `mts`:
+```R 
+morrisjs(mdeaths) %>% 
+  mjsArea
+```
+
+### Donut chart
+
+```R 
+morrisjs(list(c("Label 1", "Label 2"), c(10, 20))) %>% 
+  mjsDonut
+```
+
+## Inputs
+
+For lines, areas and bars, inputs can be either `ts`, `xts` or `mts`:
 
 ```R 
 morrisjs(mdeaths) %>% 
@@ -44,6 +60,8 @@ morrisjs(df) %>%
   mjsLine
 ```
 
-#### Options 
+For donuts, inputs should be a list of two elements: a vector of characters and a vector of numerics.
+
+## Options 
 
 All options are listed on the [morris.js github page](http://morrisjs.github.io/morris.js/index.html) and can be passed as parameters to the `mjs` functions.

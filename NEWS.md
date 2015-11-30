@@ -1,3 +1,7 @@
+# morris.js 0.2.0 - 2015/11/30
+
++ Donut charts are available with list inputs
+
 # morris.js 0.1.0 - 2015/11/29
 
 + Bar, Line and Area charts are available,

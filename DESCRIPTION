@@ -1,6 +1,6 @@
 Package: morrisjs
 Title: Create graphs using the morris.js library
-Version: 0.1
+Version: 0.2.0
 Authors@R: "Pierre Formont <pierre.formont@gmail.com> [aut, cre]"
 Description: An R interface to the 'morris.js' Javascript library.
 Depends:
