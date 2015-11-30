@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/Tutuchan/morrisjs.svg?branch=master)](https://travis-ci.org/Tutuchan/morrisjs)
+
 #### morris.js for R
 
 This package is an interface to the [morris.js](http://morrisjs.github.io/morris.js/index.html) charting library.
@@ -37,7 +39,7 @@ morrisjs(ts.union(fdeaths, mdeaths)) %>%
 They can also be `data.frame`s or `tbl_df`s with the first column being of class `Date`:
 
 ```R 
-df <- data_frame(date = as.Date(c("2011-01-01", "2011-02-01", "2011-03-01")), series1 = rnorm(3), series2 = rnorm(3))
+df <- dplyr::data_frame(date = as.Date(c("2011-01-01", "2011-02-01", "2011-03-01")), series1 = rnorm(3), series2 = rnorm(3))
 morrisjs(df) %>% 
   mjsLine
 ```
