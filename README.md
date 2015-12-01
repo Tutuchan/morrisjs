@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/Tutuchan/morrisjs.svg?branch=master)](https://travis-ci.org/Tutuchan/morrisjs)
 
-## morris.js for R - 0.2.1
+## morris.js for R - 0.2.2
 
 This package is an interface to the [morris.js](http://morrisjs.github.io/morris.js/index.html) charting library.
 

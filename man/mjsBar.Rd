@@ -4,8 +4,7 @@
 \alias{mjsBar}
 \title{Bar charts}
 \usage{
-morrisjs(data) %>% 
-mjsBar(options = NULL)
+mjsBar(morrisjs, options = NULL)
 }
 \arguments{
 \item{morrisjs}{a \code{\link{morrisjs}} object,}

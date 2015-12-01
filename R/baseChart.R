@@ -14,9 +14,9 @@ baseChart <- function(morrisjs, type, options){
                     ts = xts::as.xts(tsData))
   
   # Extract the values of the xkey depending on the class of the index
-  xkey <- switch(class(index(xtsData)),
+  xkey <- switch(class(zoo::index(xtsData)),
                  yearmon = substr(zoo::as.Date.yearmon(index(xtsData)), 1, 7),
-                 Date = index(xtsData))
+                 Date = zoo::index(xtsData))
   
   # Give a name to the data in case of only one timeseries
   if (is.null(names(xtsData))) names(xtsData) <- "data"

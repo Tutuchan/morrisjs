@@ -1,3 +1,7 @@
+# morris.js 0.2.2 - 2015/12/01
+
++ package is now CRAN-compliant
+
 # morris.js 0.2.1 - 2015/11/30
 
 + improved documentation,

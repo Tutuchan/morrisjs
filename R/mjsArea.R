@@ -5,8 +5,6 @@
 #' 
 #' @param morrisjs a \code{\link{morrisjs}} object,
 #' @param options an optional list of parameters
-#' @usage morrisjs(data) %>% 
-#' mjsArea(options = NULL)
 #' @export
 mjsArea <- function(morrisjs, options = NULL){
   baseChart(morrisjs, "Area", options = options)

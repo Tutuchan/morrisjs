@@ -4,8 +4,7 @@
 \alias{mjsLine}
 \title{Line charts}
 \usage{
-morrisjs(data) %>% 
-mjsLine(options = NULL)
+mjsLine(morrisjs, options = NULL)
 }
 \arguments{
 \item{morrisjs}{a \code{\link{morrisjs}} object,}

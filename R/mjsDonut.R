@@ -8,8 +8,6 @@
 #' 
 #' @param morrisjs a \code{\link{morrisjs}} object,
 #' @param options an optional list of parameters
-#' @usage morrisjs(data) %>% 
-#' mjsArea(options = NULL)
 #' @export
 mjsDonut <- function(morrisjs, options = NULL){
   

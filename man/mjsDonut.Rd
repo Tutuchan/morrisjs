@@ -4,8 +4,7 @@
 \alias{mjsDonut}
 \title{Donut charts}
 \usage{
-morrisjs(data) %>% 
-mjsArea(options = NULL)
+mjsDonut(morrisjs, options = NULL)
 }
 \arguments{
 \item{morrisjs}{a \code{\link{morrisjs}} object,}

@@ -11,7 +11,7 @@
 #' @param width the width of the widget (in pixels),
 #' @param height the height of the widget (in pixels).
 #'
-#' @import htmlwidgets
+#' @import htmlwidgets zoo
 #' @export
 morrisjs <- function(data, width = NULL, height = NULL) {
 

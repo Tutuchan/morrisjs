@@ -4,8 +4,7 @@
 \alias{mjsArea}
 \title{Area charts}
 \usage{
-morrisjs(data) %>% 
-mjsArea(options = NULL)
+mjsArea(morrisjs, options = NULL)
 }
 \arguments{
 \item{morrisjs}{a \code{\link{morrisjs}} object,}
