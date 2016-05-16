@@ -19,5 +19,5 @@ morrisjs(mdeaths) %>%
   mjsArea
 
 # Donut
-morrisjs(list(c("Red", "Green", "Blue"), c(10, 20, 30))) %>% 
-  mjsDonut(options = list(colors = RColorBrewer::brewer.pal(12, "Paired")[c(6,4,2)]))
+morrisjs(list(LETTERS[1:3], c(10, 20, 30)), width = 926, height = 283) %>% 
+  mjsDonut(options = list(formatter = htmlwidgets::JS("function (y) { return y+'%' }")))

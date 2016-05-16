@@ -18,7 +18,9 @@ morrisjs <- function(data, width = NULL, height = NULL) {
   # forward options using x
   x = list(
     data = data,
-    element = paste0("htmlwidget-", digest::digest(data))
+    element = paste0("htmlwidget-", digest::digest(Sys.time())),
+    resize = TRUE,
+    hideHover = TRUE
   )
 
   # create widget

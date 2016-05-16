@@ -1,0 +1,51 @@
+---
+title: "Test morrisjs chart"
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+    horizontal_layout: fill
+    source_code: embed
+---
+
+```{r setup, include=FALSE}
+library(flexdashboard)
+library(morrisjs)
+```
+
+Column
+-----------------------------------------------------------------------
+
+### Line chart
+
+```{r}
+morrisjs(mdeaths) %>%
+  mjsLine
+```
+
+
+### Bar chart
+
+```{r}
+morrisjs(mdeaths) %>% 
+  mjsBar
+```
+
+
+Column 
+-----------------------------------------------------------------------
+
+### Area chart
+
+```{r}
+morrisjs(mdeaths) %>% 
+  mjsArea
+```
+
+### Donut chart
+
+```{r}
+morrisjs(list(c("Label 1", "Label 2"), c(10, 20))) %>% 
+  mjsDonut
+```
+

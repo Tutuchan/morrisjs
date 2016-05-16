@@ -37,7 +37,7 @@ baseChart <- function(morrisjs, type, options){
   
   # Add options
   if (!is.null(options)){
-    morrisjs$x <- c(morrisjs$x, options)
+    morrisjs$x <- merge_lists(morrisjs$x, options)
   }
   
   morrisjs

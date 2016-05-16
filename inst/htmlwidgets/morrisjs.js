@@ -22,8 +22,6 @@ HTMLWidgets.widget({
       x.labels = new Array(x.labels);
     }
   }
-    
-    
   
   // Create the graph  
   var mjs;
@@ -41,7 +39,6 @@ HTMLWidgets.widget({
       mjs = new Morris.Donut(x);
       break;
   }
-  
   // Draw it
   mjs.draw();
 
