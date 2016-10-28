@@ -5,9 +5,15 @@ HTMLWidgets.widget({
   type: 'output',
   
   factory: function(el, width, height) {
+    var mjs;
     return {
       renderValue: function(x) {
         x.element = el.id;
+        
+        // Remove existing charts if any
+        while (el.childElementCount > 0) {
+          el.removeChild(el.children[0]);
+        }
         
         // Workaround if only one series is plotted
         if ("ykeys" in x){
@@ -20,7 +26,6 @@ HTMLWidgets.widget({
         }
         
         // Create the graph  
-        var mjs;
         switch(x.type){
           case "Line": 
             mjs = new Morris.Line(x);
@@ -41,7 +46,9 @@ HTMLWidgets.widget({
       
       resize: function(x, width, height) {
         
-      }
+      },
+      
+      mjs: mjs
     };
   }
 });

@@ -1,6 +1,6 @@
 [![Build Status](https://travis-ci.org/Tutuchan/morrisjs.svg?branch=master)](https://travis-ci.org/Tutuchan/morrisjs)
 
-## morris.js for R - 0.2.2
+## morris.js for R - 0.2.4
 
 This package is an interface to the [morris.js](http://morrisjs.github.io/morris.js/index.html) charting library.
 
@@ -16,28 +16,28 @@ devtools::install_github("tutuchan/morrisjs")
 
 ```R 
 morrisjs(mdeaths) %>% 
-  mjsLine
+  mjsLine()
 ```
 
 ### Bar chart
 
 ```R 
 morrisjs(mdeaths) %>% 
-  mjsBar
+  mjsBar()
 ```
 
 ### Area chart
 
 ```R 
 morrisjs(mdeaths) %>% 
-  mjsArea
+  mjsArea()
 ```
 
 ### Donut chart
 
 ```R 
 morrisjs(list(c("Label 1", "Label 2"), c(10, 20))) %>% 
-  mjsDonut
+  mjsDonut()
 ```
 
 ## Inputs
@@ -46,23 +46,23 @@ For lines, areas and bars, inputs can be either `ts`, `xts` or `mts`:
 
 ```R 
 morrisjs(mdeaths) %>% 
-  mjsLine
+  mjsLine()
   
 morrisjs(ts.union(fdeaths, mdeaths)) %>% 
-  mjsLine
+  mjsLine()
 ```
 
 They can also be `data.frame`s or `tbl_df`s with the first column being of class `Date`:
 
 ```R 
-df <- dplyr::data_frame(date = as.Date(c("2011-01-01", "2011-02-01", "2011-03-01")), 
-                        series1 = rnorm(3), series2 = rnorm(3))
+df <- tibble::tibble(date = as.Date(c("2011-01-01", "2011-02-01", "2011-03-01")), 
+                     series1 = rnorm(3), series2 = rnorm(3))
 morrisjs(df) %>% 
-  mjsLine
+  mjsLine()
 ```
 
 For donuts, inputs should be a list of two elements: a vector of characters and a vector of numerics.
 
 ## Options 
 
-All options are listed on the [morris.js github page](http://morrisjs.github.io/morris.js/index.html) and can be passed as parameters to the `mjs` functions.
+All options are listed on the [morris.js github page](http://morrisjs.github.io/morris.js/index.html) and can be passed as parameters to the `mjs*` functions.
