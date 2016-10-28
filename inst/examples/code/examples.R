@@ -4,7 +4,7 @@ df <- dplyr::data_frame(date = as.Date(c("2011-01-01", "2011-02-01", "2011-03-01
 
 # Bar
 morrisjs(df) %>% 
-  mjsBar
+  mjsBar()
 
 # Line and options
 morrisjs(ts.union(fdeaths, mdeaths)) %>% 
