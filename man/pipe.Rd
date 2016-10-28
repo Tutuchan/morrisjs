@@ -15,6 +15,6 @@ lhs \%>\% rhs
 Imports the pipe operator from magrittr.
 }
 \examples{
-morrisjs(mdeaths) \%>\% mjsLine
+morrisjs(mdeaths) \%>\% mjsLine()
 }
 

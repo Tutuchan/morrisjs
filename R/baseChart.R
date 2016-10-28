@@ -1,22 +1,24 @@
-# Base line and bar charts creation function
+#' @importFrom xts as.xts 
+#' @importFrom zoo index as.Date.yearmon
 baseChart <- function(morrisjs, type, options){
   tsData <- morrisjs$x$data
   
   # Transform data to xts
-  xtsData <- switch(class(tsData)[1],
-                    tbl_df = {
-                      aux <- as.data.frame(tsData)
-                      xts::as.xts(aux[, -1], order.by = aux[, 1])
-                    },
-                    data.frame = xts::as.xts(tsData[, -1], order.by = tsData[, 1]),
-                    xts = tsData,
-                    mts = xts::as.xts(tsData),
-                    ts = xts::as.xts(tsData))
+  xtsData <- switch(
+    class(tsData)[1],
+    tbl_df = {
+      aux <- as.data.frame(tsData)
+      as.xts(aux[, -1], order.by = aux[, 1])
+    },
+    data.frame = as.xts(tsData[, -1], order.by = tsData[, 1]),
+    xts = tsData,
+    mts = as.xts(tsData),
+    ts = as.xts(tsData))
   
   # Extract the values of the xkey depending on the class of the index
-  xkey <- switch(class(zoo::index(xtsData)),
-                 yearmon = substr(zoo::as.Date.yearmon(index(xtsData)), 1, 7),
-                 Date = zoo::index(xtsData))
+  xkey <- switch(class(index(xtsData)),
+                 yearmon = substr(as.Date.yearmon(index(xtsData)), 1, 7),
+                 Date = index(xtsData))
   
   # Give a name to the data in case of only one timeseries
   if (is.null(names(xtsData))) names(xtsData) <- "data"

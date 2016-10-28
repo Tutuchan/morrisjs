@@ -11,26 +11,24 @@
 #' @param width the width of the widget (in pixels),
 #' @param height the height of the widget (in pixels).
 #'
-#' @import htmlwidgets zoo
+#' @importFrom htmlwidgets createWidget shinyWidgetOutput shinyRenderWidget
 #' @export
 morrisjs <- function(data, width = NULL, height = NULL) {
 
   # forward options using x
   x = list(
     data = data,
-    element = paste0("htmlwidget-", digest::digest(Sys.time())),
     resize = TRUE,
     hideHover = TRUE
   )
 
   # create widget
-  htmlwidgets::createWidget(
+  createWidget(
     name = 'morrisjs',
     x,
     width = width,
     height = height,
-    package = 'morrisjs',
-    elementId = x$element
+    package = 'morrisjs'
   )
 }
 
@@ -55,3 +53,4 @@ renderMorrisjs <- function(expr, env = parent.frame(), quoted = FALSE) {
   if (!quoted) { expr <- substitute(expr) } # force quoted
   shinyRenderWidget(expr, morrisjsOutput, env, quoted = TRUE)
 }
+

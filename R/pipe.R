@@ -8,5 +8,5 @@
 #' @param rhs a charting function
 #' @rdname pipe
 #' @examples
-#' morrisjs(mdeaths) %>% mjsLine
+#' morrisjs(mdeaths) %>% mjsLine()
 `%>%` <- magrittr::`%>%`
